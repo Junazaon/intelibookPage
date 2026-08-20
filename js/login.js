@@ -18,7 +18,7 @@ const togglePassword = document.querySelector('#toggle-password');
 let mode = 'login';
 
 if (getSession()) window.location.href = 'dashboard.html';
-submitLabel.dataset.default = 'Entrar a Libretas';
+submitLabel.dataset.default = 'Entrar a InteliBook';
 
 function switchMode(nextMode) {
   mode = nextMode;
@@ -29,7 +29,7 @@ function switchMode(nextMode) {
   registerTab.setAttribute('aria-selected', String(isRegister));
   formTitle.textContent = isRegister ? 'Crea tu cuenta' : 'Entra a tu cuenta';
   formSubtitle.textContent = isRegister ? 'Un espacio propio para tus mejores ideas.' : 'Continúa donde lo dejaste.';
-  submitLabel.dataset.default = isRegister ? 'Crear mi cuenta' : 'Entrar a Libretas';
+  submitLabel.dataset.default = isRegister ? 'Crear mi cuenta' : 'Entrar a InteliBook';
   submitLabel.textContent = submitLabel.dataset.default;
   passwordInput.autocomplete = isRegister ? 'new-password' : 'current-password';
   passwordHint.textContent = isRegister ? 'Entre 6 y 8 caracteres.' : 'Tu contraseña de acceso.';
