@@ -77,6 +77,21 @@ input::placeholder { color: #aab5b1; } input:focus { border-color: var(--teal); 
 .server-list { display: grid; gap: 25px; }
 .server-list article { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
 .server-list h3 { margin: 0 0 8px; }
-@media (max-width: 760px) { .site-header { align-items: flex-start; gap: 20px; } .site-header nav { flex-wrap: wrap; justify-content: flex-end; gap: 14px; } .site-brand img { width: 125px; } .vision-grid, .product-diagram, .server-section, .product-hero { grid-template-columns: 1fr; gap: 42px; } .principles { grid-template-columns: 1fr; } .content-section { padding-top: 70px; padding-bottom: 70px; } .site-footer { gap: 15px; flex-direction: column; } }
+.benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.benefit-card { min-height: 280px; padding: 28px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); }
+.benefit-card:nth-child(2) { background: var(--mint); border-color: var(--mint); }
+.benefit-card:nth-child(3) { background: #f6e8c5; border-color: #f0dbad; }
+.benefit-number { color: var(--coral); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+.benefit-card h3 { margin: 54px 0 12px; font-family: var(--serif); font-size: 27px; line-height: 1.05; }
+.benefit-card p { color: var(--muted); line-height: 1.6; }
+.benefit-card strong { display: block; margin-top: 24px; color: var(--teal); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.comparison-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
+.comparison-table { align-self: center; border-top: 2px solid var(--teal); }
+.comparison-row { display: grid; grid-template-columns: .75fr 1.35fr 1fr; gap: 18px; padding: 17px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; line-height: 1.45; }
+.comparison-row strong { color: var(--teal); }
+.comparison-head { color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.comparison-head strong { color: var(--coral); }
+@media (max-width: 760px) { .site-header { align-items: flex-start; gap: 20px; } .site-header nav { flex-wrap: wrap; justify-content: flex-end; gap: 14px; } .site-brand img { width: 125px; } .vision-grid, .product-diagram, .server-section, .product-hero, .comparison-section { grid-template-columns: 1fr; gap: 42px; } .principles, .benefit-grid { grid-template-columns: 1fr; } .content-section { padding-top: 70px; padding-bottom: 70px; } .site-footer { gap: 15px; flex-direction: column; } }
+@media (max-width: 520px) { .comparison-row { grid-template-columns: 1fr; gap: 5px; } .comparison-head span:last-child { display: none; } .comparison-row span:last-child { padding-bottom: 8px; } }
 @media (max-width: 760px) { .auth-shell { display: block; } .brand-panel { min-height: 330px; padding: 25px 24px; } .brand-copy { padding: 35px 0 20px; } .brand-copy h1 { font-size: 46px; } .brand-description { display: none; } .form-panel { padding: 48px 24px 55px; } .workspace-grid { grid-template-columns: 1fr 1fr; margin-top: 55px; } .accent-card { grid-column: 1 / -1; } .header-actions { gap: 10px; } .user-greeting { display: none; } }
 @media (max-width: 430px) { .workspace-grid { grid-template-columns: 1fr; } .accent-card { grid-column: auto; } .app-header { padding: 20px 18px; } }
