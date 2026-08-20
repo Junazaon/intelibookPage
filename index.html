@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acceso seguro a Libreta, tu espacio de trabajo personal.">
+  <title>Libreta | Acceso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="brand-panel" aria-labelledby="brand-title">
+      <div class="brand-mark" aria-hidden="true">L</div>
+      <div class="brand-copy">
+        <p class="eyebrow">Tu espacio de trabajo</p>
+        <h1 id="brand-title">Ideas claras.<br><em>Trabajo en marcha.</em></h1>
+        <p class="brand-description">Guarda lo importante, vuelve a lo que importa y mantén tu día en movimiento.</p>
+      </div>
+      <div class="brand-footer"><span class="status-dot"></span> Tu información, siempre contigo</div>
+    </section>
+
+    <section class="form-panel" aria-label="Acceso a Libretas">
+      <div class="form-wrap">
+        <div class="form-heading">
+          <p class="eyebrow">Bienvenido de vuelta</p>
+          <h2 id="form-title">Entra a tu cuenta</h2>
+          <p id="form-subtitle">Continúa donde lo dejaste.</p>
+        </div>
+
+        <div class="mode-switch" role="tablist" aria-label="Tipo de acceso">
+          <button class="mode-button is-active" id="login-tab" type="button" role="tab" aria-selected="true">Iniciar sesión</button>
+          <button class="mode-button" id="register-tab" type="button" role="tab" aria-selected="false">Crear cuenta</button>
+        </div>
+
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+
+        <form id="auth-form" novalidate>
+          <div class="field-group">
+            <label for="username">Nombre de usuario</label>
+            <input id="username" name="username" type="text" autocomplete="username" placeholder="ej. ana.garcia" maxlength="40" required>
+            <small class="field-hint">Letras, números, guion, punto o guion bajo.</small>
+          </div>
+          <div class="field-group">
+            <div class="label-row"><label for="password">Contraseña</label><span id="password-count" class="character-count">0 / 8</span></div>
+            <div class="password-field">
+              <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" minlength="6" maxlength="8" required>
+              <button id="toggle-password" class="icon-button" type="button" aria-label="Mostrar contraseña" title="Mostrar contraseña">◉</button>
+            </div>
+            <small id="password-hint" class="field-hint">Entre 6 y 8 caracteres.</small>
+          </div>
+          <button id="submit-button" class="primary-button" type="submit"><span id="submit-label">Entrar a Libretas</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+        </form>
+
+        <p class="security-note"><span aria-hidden="true">✦</span> Conexión protegida mediante HTTPS</p>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

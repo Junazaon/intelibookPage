@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tu espacio de trabajo en Libretas.">
+  <title>Libreta | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-page">
+  <header class="app-header">
+    <a class="app-logo" href="dashboard.html" aria-label="Libreta, inicio"><span class="brand-mark small">L</span><span>Libreta</span></a>
+    <div class="header-actions"><span id="user-greeting" class="user-greeting"></span><button id="logout-button" class="text-button" type="button">Cerrar sesión <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <main class="dashboard-main">
+    <section class="welcome-block"><p class="eyebrow">Tu panel</p><h1>Un lugar para<br><em>pensar mejor.</em></h1><p class="welcome-copy">Tu espacio está listo. Aquí podrás organizar tus libretas, notas y próximos proyectos.</p></section>
+    <section class="workspace-grid" aria-label="Resumen del espacio de trabajo">
+      <article class="workspace-card accent-card"><span class="card-kicker">Próximamente</span><h2>Tus libretas<br>en un solo lugar.</h2><p>Empieza a construir un sistema que trabaje a tu manera.</p><button class="outline-button" type="button" disabled>Crear una libreta <span aria-hidden="true">+</span></button></article>
+      <article class="stat-card"><span class="stat-number">00</span><span class="stat-label">Libretas activas</span></article>
+      <article class="stat-card pale"><span class="stat-number">00</span><span class="stat-label">Notas creadas</span></article>
+    </section>
+  </main>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
